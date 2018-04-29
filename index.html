@@ -40,7 +40,7 @@
 	  }
 	  
 	  function showButtonWhenEnd() {
-		if(player.getPlayerState() == YT.PlayerState.ENDED)
+		if(player.getCurrentTime() > 30)
 		{
 			var c = document.getElementById("endedButton");
 			c.style.visibility = "visible"
