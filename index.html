@@ -1,52 +1,6 @@
 <!DOCTYPE html>
 <html>
   <body>
-	<h1>not: uzmankirala'da proje kapalı olduğu için size yeni mesaj atamadim. sanırım mesaj atabilmem için projenin yayında olması gerekiyor.</h1>
-    <div id="player"></div>
-	
-	<h1>VIDEO ZAMANI</h1>
-	<h1 id="currentTime">0</h1>
-	<input id="endedButton" type="button" value="Button" style="font-size:20px; visibility:hidden"/>
-    <script>
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	  
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'w01V5FI03MQ',
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
-      }
-
-      function onPlayerReady(event) {
-        setInterval(showCurrentTime, 100);
-		setInterval(showButtonWhenEnd, 100);
-      }
-	  
-	  function showCurrentTime() {
-		if(player.getPlayerState() == YT.PlayerState.PLAYING)
-		{
-			var t = player.getCurrentTime();
-			var c = document.getElementById("currentTime");
-			c.innerText = t;
-		}
-	  }
-	  
-	  function showButtonWhenEnd() {
-		if(player.getCurrentTime() > 30)
-		{
-			var c = document.getElementById("endedButton");
-			c.style.visibility = "visible"
-		}
-	  }
-    </script>
+	:(
   </body>
 </html>
